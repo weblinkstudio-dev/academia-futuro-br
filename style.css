@@ -32,6 +32,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -329,8 +334,9 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 30px;
+  padding: 1em 2em;
   border-radius: 18px;
+  font-size: 17px;
   font-weight: 800;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
@@ -353,8 +359,8 @@ button {
 }
 
 .btn.small {
-  padding: 16px 24px;
-  font-size: 15px;
+  padding: 1em 2em;
+  font-size: 17px;
 }
 
 .btn.large {
@@ -599,6 +605,10 @@ button {
 
 .about {
   padding: 110px 0 120px;
+}
+
+.about.reveal-section {
+  transform: none;
 }
 
 .about-grid {
@@ -1434,8 +1444,13 @@ button {
     padding-bottom: 50px;
   }
 
+  .hero-space {
+    min-height: 70px;
+    display: flex;
+}
+
   .hero-content h2 {
-    font-size: 42px;
+    font-size: 54px;
   }
 
   .hero-actions,
@@ -1450,7 +1465,39 @@ button {
   }
 
   .btn {
-    width: 100%;
+    width: auto;
+    padding: 1em 2em;
+    font-size: 18px;
+  }
+
+  .teacher-body h3{
+    font-size: 26px;
+  }
+
+  .teacher-subject {
+    font-size: 20px;
+  }
+
+  .teacher-title {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .teacher-subtitle {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .teacher-description{
+    font-size: 16px;
+  }
+
+  .stat-card .stat-value {
+    font-size: 64px;
+  }
+
+  .stat-title {
+    font-size: 26px;
   }
 
   .social-proof {
@@ -1463,11 +1510,18 @@ button {
   .differentials-grid,
   .teachers-grid,
   .form-grid {
-    grid-template-columns: 1fr;
+            display: flex;
+        flex-direction: column;
+        gap: 20px;
   }
 
   .section-heading h2 {
-    font-size: 38px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .section-heading p {
+    text-align: center;
   }
 
   .contact-card {
@@ -1475,13 +1529,22 @@ button {
   }
 
   #contactForm {
-    padding: 24px 20px 20px;
+    padding: 26px 20px;
+    gap: 20px;
+        display: flex;
+        flex-direction: column;
+  }
+
+  .form-actions {
+        margin-top: 10px;
   }
 
   .program-cta {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    width: auto;
+    padding: 1em 2em;
   }
 
   .teacher-actions {
@@ -1493,15 +1556,69 @@ button {
   }
 
   .about-list {
-    gap: 18px;
+    gap: 23px;
+  }
+
+  .floating-badge {
+    top: -30px;
+    bottom: auto;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.422);
+  }
+
+  .info-card.info-yellow {
+    border-right-color: var(--yellow-500);
+  }
+  .info-card.info-blue { 
+    border-right-color: var(--blue-500); 
+  }
+
+  .info-card.info-purple { 
+    border-right-color: var(--purple-500); 
   }
 
   .about-image-wrap {
     position: relative;
     top: auto;
+    margin-top: 40px; 
+  }
+
+  .differentials .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .differential-card h3 {
+    font-size: 28px;
+    line-height: 1.2; 
   }
 
   .info-card {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 6px solid transparent;
+    border-right-color: var(--emerald-500);
+    padding: 30px;
+  }
+
+  .faq-button {
+    line-height: 1.2em;
+  }
+
+  .faq-cta p{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .btn.small {
+    padding: 1em 2em;
+    font-size: 18px;
+  }
+
+  .site-footer {
+    padding: 50px 15px;
   }
 }
